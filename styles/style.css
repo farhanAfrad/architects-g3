@@ -15,6 +15,9 @@ body{
 .des-color{
     color: #727272;
 }
+.color-2{
+    color:#FF900E;
+}
 /*header style  */
 .header{
     background: rgba(255, 144, 14, 0.10);
@@ -69,12 +72,56 @@ nav{
 }
 .banner{
     max-width: 1440px;
+    padding-bottom: 45px;
 }
 .banner img{
     width: 100%;
 }
 
+/* main section style */
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 45px;
+}
 
+/* feactures section style */
+.feature-section-container{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    gap: 70px;
+    margin: 0 auto;
+    
+}
+.feature-image{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.f-des-title{
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 24px;
+
+}
+.feature-information > .des-color{
+    margin-bottom: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
 @media  screen and (max-width:576px) {
     .header-content,.banner{
         width: 100%;
@@ -91,5 +138,13 @@ nav{
     }
     .header-title{
         font-size: 45px;
+    }
+
+    /* features section responsive */
+    .feature-section-container{
+        flex-direction: column-reverse;
+    }
+    .feature-image{
+        grid-template-columns: repeat(1,1fr);
     }
 }
