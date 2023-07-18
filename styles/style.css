@@ -4,7 +4,7 @@ body{
     font-family: 'Work Sans', sans-serif;
 }
 /* common */
-.contianer{
+.container{
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -17,6 +17,11 @@ body{
 .color-2{
     color:#FF900E;
 }
+.nav-title,
+.experience-information-title,.facts-title {
+    font-size: 45px;
+    font-weight: 700;
+}
 /*header style  */
 .header{
     background: rgba(255, 144, 14, 0.10);
@@ -25,11 +30,6 @@ body{
     text-align: center;
 }
 
-.nav-title,
-.experience-information-title {
-    font-size: 45px;
-    font-weight: 700;
-}
 /* nav style */
 nav{
     display: flex;
@@ -163,6 +163,48 @@ main{
     bottom: -30px;
 }
 
+/* facts section styles */
+.facts-section-container{
+    margin-top: 130px;
+}
+.facts-title{
+    margin-bottom: 24px;
+}
+.fact-des{
+    margin-top: 0;
+}
+
+.facts-item{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.facts-item .item{
+    text-align: center;
+    padding: 45px;
+    border: 1px solid #FF900E;
+    background: #fff;
+    border-radius: 5px;
+    transition: transform 0.6s;
+}
+.facts-item .item-title{
+    font-size: 45px;
+    font-weight: 600;
+    color: #424242;
+    margin: 10px;
+    margin-bottom: 0;
+}
+.facts-item .item-des{
+    font-size: 20px;
+    font-weight: 600;
+    color: #727272;
+    margin: 0;
+}
+
+.facts-item .item:hover{
+    transform: rotate(90deg);
+}
+
 
 
 
@@ -177,7 +219,8 @@ main{
 @media  screen and (max-width:576px) {
     /* common  */
     nav,
-    .features-you-can-experience-container {
+    .features-you-can-experience-container,
+    .facts-item {
             flex-direction: column;
         }
 
@@ -225,6 +268,14 @@ main{
         left: 50%;
         transform: translatex(-50%);
         background-color: #ff8f0ecb;
+    }
+
+    /* facts  */
+    .facts-item{
+        width: 90%;
+        margin: 0 auto;
+        gap: 10px;
+        margin-top: 50px;
     }
     
 }
