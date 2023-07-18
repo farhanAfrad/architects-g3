@@ -18,7 +18,8 @@ body{
     color:#FF900E;
 }
 .nav-title,
-.experience-information-title,.facts-title {
+.experience-information-title,.facts-title,
+.sponson-section-title {
     font-size: 45px;
     font-weight: 700;
 }
@@ -205,6 +206,24 @@ main{
     transform: rotate(90deg);
 }
 
+/* sponsor section style */
+.sponsor-section{
+    text-align: center;
+    margin-top: 170px;
+}
+.sponson-section-title{
+    margin-bottom: 5px;
+}
+.sponsor-section > .des-color{
+    margin-top: 0;
+}
+.sponsors{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    filter: grayscale(100%);
+    align-items: center;
+}
 
 
 
@@ -277,5 +296,20 @@ main{
         gap: 10px;
         margin-top: 50px;
     }
-    
+    /* sponsors responsive */
+    .sponsors{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,80px);
+        align-items: center;
+        gap: 5px;
+    }
+    .sponsors img{
+        width: 140px;
+    }
+    .sponsor-section{
+        margin-top: 80px;
+    }
 }
