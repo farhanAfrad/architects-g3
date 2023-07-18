@@ -4,10 +4,9 @@ body{
     font-family: 'Work Sans', sans-serif;
 }
 /* common */
-.header-content{
+.contianer{
     max-width: 1440px;
     margin: 0 auto;
-    text-align: center;
 }
 .title-color{
     color: #131313;
@@ -22,17 +21,22 @@ body{
 .header{
     background: rgba(255, 144, 14, 0.10);
 }
+.header-content {
+    text-align: center;
+}
 
+.nav-title,
+.experience-information-title {
+    font-size: 45px;
+    font-weight: 700;
+}
 /* nav style */
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.nav-title{
-    font-size: 45px;
-    font-weight: 700;
-}
+
 .nav-item{
     width: 30%;
 }
@@ -80,8 +84,6 @@ nav{
 
 /* main section style */
 main{
-    max-width: 1440px;
-    margin: 0 auto;
     margin-top: 45px;
 }
 
@@ -109,7 +111,57 @@ main{
     margin-bottom: 32px;
 }
 
+/* experience section style */
+.features-you-can-experience-container{
+    margin-top: 130px;
+    display: flex;
+    gap: 145px;
+}
+.experience-information-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+    margin-bottom: 24px;
+}
+.experience-information > .des-color{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.items{
+    padding: 30px 42px 30px 30px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+}
+.item-title{
+    margin-bottom: 10px;
+    color: #131313;
+    font-size: 20px;
+    font-weight: 600;
+}
+.items > .des-color{
+    margin-top: 0;
+}
+.experience-banner > .primary-button{
 
+}
+.experience-banner-button-span-one{
+    font-size: 65px;
+    font-weight: 700;
+}
+.experience-banner-button-span-two{
+    display: block;
+    font-size: 25px;
+    font-weight: 500;
+}
+.experience-banner{
+    position: relative;
+}
+.secondary-button{
+    position: absolute;
+    left: -65px;
+    bottom: -30px;
+}
 
 
 
@@ -123,6 +175,12 @@ main{
 
 /* responsive */
 @media  screen and (max-width:576px) {
+    /* common  */
+    nav,
+    .features-you-can-experience-container {
+            flex-direction: column;
+        }
+
     .header-content,.banner{
         width: 100%;
     }
@@ -147,4 +205,26 @@ main{
     .feature-image{
         grid-template-columns: repeat(1,1fr);
     }
+
+    /* experience section responsive */
+    .features-you-can-experience-container{
+        gap: 50px;
+    }
+    .experience-banner,.banner-image img{
+        width: 100%;
+    }
+    .banner-image{
+        width: 90%;
+        margin: 0 auto;
+
+    }
+    .experience-banner-button-span-one{
+        font-size: 35px;
+    }
+    .secondary-button{
+        left: 50%;
+        transform: translatex(-50%);
+        background-color: #ff8f0ecb;
+    }
+    
 }
